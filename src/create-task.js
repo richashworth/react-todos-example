@@ -7,22 +7,25 @@ class CreateTask extends Component {
     super(props);
 
     this.state = {
-      currentItem: ' '
+      currentItem: ''
     };
   }
 
-  // onEnterData = (e) => {
-  //   e.preventDefault();
-  //   this.setState({currentItem: e.target.value});
-  // }
+  onInputChange = (e) => {
+    this.setState({currentItem: e.target.value});
+  }
 
-  handleSubmit = this.props.onEnterBtn(this.state.currentItem);
+  handleSubmit= (e) => {
+    e.preventDefault();
+    this.props.onEnterBtn(this.state.currentItem);
+    this.setState({currentItem: ''});
+  }
 
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <input value = {this.state.currentItem}/>
-        <input type='submit' value='Submit'/>
+        <input value={this.state.currentItem} onChange={this.onInputChange}/>
+        <button>Submit</button>
       </form>
     );
   }

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import CreateTask from './create-task';
+import TaskList from './task-list';
 
 class App extends Component {
 
@@ -12,7 +13,11 @@ class App extends Component {
     }
   };
 
-  addTask = (task) => this.setState({todos: this.state.tasks.concat([task])});
+  addTask = (task) => {
+    this.setState(
+      {tasks: this.state.tasks.concat([task])}
+    );
+  }
 
   render() {
     return (
@@ -20,8 +25,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">TODO List</h1>
         </header>
-        {/* <TaskList /> */}
-        {this.state.tasks}
+        <TaskList tasks={this.state.tasks}/>
         <CreateTask onEnterBtn={this.addTask}/>
       </div>
     );
