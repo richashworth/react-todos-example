@@ -5,7 +5,7 @@ const TaskList = (props) => {
   const list = props.tasks.map (
     (task, index) => {
       return (
-        <TaskItem key={index} task={`${index}. ${task}`}/>
+        <TaskItem key={index} task={`${index + 1}. ${task}`}/>
       );
     }
   );
