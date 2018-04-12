@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import CreateTask from './create-task';
 import TaskList from './task-list';
+import {removeElemFromArr} from './utils';
 
 class App extends Component {
 
@@ -20,13 +21,7 @@ class App extends Component {
   }
 
   deleteTask = (task) => {
-    var ts = this.state.tasks;
-    let index = ts.indexOf(task);
-    console.log('index= '+index);
-    if(index > -1){
-      ts.splice(index, 1);
-      this.setState({tasks: ts});
-    }
+    this.setState({tasks: removeElemFromArr(task, this.state.tasks)});
   }
 
   render() {
