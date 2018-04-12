@@ -15,7 +15,7 @@ class CreateTask extends Component {
     this.setState({currentItem: e.target.value});
   }
 
-  handleSubmit= (e) => {
+  handleSubmit = (e) => {
     e.preventDefault();
     this.props.onEnterBtn(this.state.currentItem);
     this.setState({currentItem: ''});
@@ -25,7 +25,7 @@ class CreateTask extends Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <input value={this.state.currentItem} onChange={this.onInputChange}/>
-        <button>Submit</button>
+        <button>Add Task</button>
       </form>
     );
   }
