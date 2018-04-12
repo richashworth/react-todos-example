@@ -7,17 +7,21 @@ const TaskList = (props) => {
     (task, index) => {
       return (
       <div>
-        <TaskItem key={index} task={task} taskDesc={`${index + 1}. ${task}`} onDeleteBtn={props.onDeleteBtn}/>
+        <TaskItem
+          key={index}
+          task={task}
+          taskDesc={`${index + 1}. ${task}`}
+          onDeleteBtn={props.onDeleteBtn}/>
       </div>
       );
     }
-  );
+  )
 
   return (
     <ul>
       {list}
     </ul>
   );
-};
+}
 
 export default TaskList;
