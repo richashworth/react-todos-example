@@ -12,6 +12,7 @@ const TaskList = (props) => {
       );
     }
   );
+
   return (
     <ul>
       {list}
