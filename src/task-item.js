@@ -8,12 +8,16 @@ const TaskItem = (props) => {
   }
 
   return (
-    <div>
-      {props.taskDesc}
-      <button onClick={() => handleDelete(props.task)}>
-        Delete
-      </button>
-    </div>
+      <tr>
+        <td>
+          {props.taskDesc}
+        </td>
+        <td>
+          <button onClick={() => handleDelete(props.task)}>
+            Delete
+          </button>
+        </td>
+      </tr>
   );
 };
 

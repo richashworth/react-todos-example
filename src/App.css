@@ -8,7 +8,7 @@
 }
 
 .App-header {
-  background-color: blue;
+  background-color: green;
   height: 50px;
   padding: 10px;
   color: white;
@@ -20,4 +20,14 @@
 
 .App-intro {
   font-size: large;
+}
+
+.TaskList {
+  margin: auto;
+  width: 20%;
+  padding: 10px;
+}
+
+.TaskRow {
+  width: 100%
 }

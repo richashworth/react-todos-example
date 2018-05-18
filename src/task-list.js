@@ -8,6 +8,7 @@ const TaskList = (props) => {
       return (
       <div>
         <TaskItem
+          className="TaskRow"
           key={index}
           task={task}
           taskDesc={`${index + 1}. ${task}`}
@@ -18,9 +19,9 @@ const TaskList = (props) => {
   )
 
   return (
-    <ul>
+    <table className="TaskList">
       {list}
-    </ul>
+    </table>
   );
 }
 
